@@ -102,6 +102,16 @@
     function onBatteryStatus(info) {
         alert("Nivel de batería: " + info.level + " \n¿está conectado?: " + info.isPlugged); 
     }
+
+    function onNetworkStatus()
+    {
+        alert(navigator.network.connection.type);
+    }
+
+    function getNetworkStatus()
+    {
+        document.addEventListener("networkstatus", onNetworkStatus, false);
+    }
     // Called if something bad happens.
     // 
     function onFail(message) {
@@ -137,6 +147,9 @@
 
 				<button id="btnSave"onclick="getBatteryStatus();">
 					Revisar estado batería</button>
+
+                <button id="btnEstadoRed"onclick="getNetworkStatus();">
+                    Revisar estado de Red</button>
 
             </div>
         </div>
