@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capturar Fotos</title>
+  </head>
+          <div data-role="page" id="page1">
+            <div data-theme="b" data-role="header">
+                <a data-role="button" href="#page1" class="ui-btn-left">
+                    Volver
+                </a>
+                <h5>
+                    Cámara
+                </h5>
+            </div>
+            <div data-role="content">
+			<h2>
+				Selección de Fotografías
+			</h2>
+			<button onclick="capturePhoto();">Capturar Foto de Cámara</button> <br>
+			<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Foto desde la librería</button><br>
+			<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+			<img style="display:none;" id="largeImage" src="" />
+            </div>
+        </div>
+  <body>
+   
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js">
+        </script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <script src="js/my.js">
+        </script>
+        <!-- User-generated css -->
+        <style>
+        </style>
+        <!-- User-generated js -->
+        <script>
+            try {
+
+    $(function() {
+
+    });
+
+  } catch (error) {
+    console.error("Your javascript has an error: " + error);
+  }
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="b" data-role="header">
+                <a data-role="button" href="index.html" class="ui-btn-left">
+                    Volver
+                </a>
+                <h3>
+                    Producto
+                </h3>
+            </div>
+            <div data-role="content">
+                <h2>
+                    Agregar Producto
+                </h2>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="nombre">
+                            Nombre:
+                        </label>
+                        <input name="nombre" id="txtNombreProducto" placeholder="Nombre del producto" value="" type="text" />
+                    </fieldset>
+                </div>
+				<div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="marca">
+                            Marca:
+                        </label>
+                        <input name="marca" id="txtMarcaProducto" placeholder="Marca del producto" value="" type="text" />
+                    </fieldset>
+                </div>
+				<div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="categoria">
+                            Categoria:
+                        </label>
+                        <select id= "txtCategoria">
+                            <option value="abarrotes">Abarrotes</option>
+                            <option value="aseoHogar">Aseo hogar</option>
+                            <option value="aseoPersonal">Aseo personal</option>    
+                            <option value="carnes">Carnes</option>
+                            <option value="lacteos">Lacteos</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="costoUnitario">
+                            Costo unitario (pesos):
+                        </label>
+                        <input id="txtCosto" placeholder="$" type="number"/> 
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="unidades">
+                           Unidades disponibles en despensa
+                        </label>
+                        <input name="unidadesDisp" id="txtUnidades" placeholder="Número de unidades en despensa" value="" type="number" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="unidadMedida">
+                            Unidad de medida
+                        </label>
+                        <select id= "txtUnidad">
+                            <option value="kg">Kilogramo</option>
+                            <option value="litro">Litro</option>
+                            <option value="paquete">Paquete</option>    
+                            <option value="botella">Botella</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div id="productos"></div>
+                
+                <button id="btnSave" onclick="agregarProducto()">Agregar el producto</button>
+
+                
+            </div>
+        </div>
+    </body>
+</html>
